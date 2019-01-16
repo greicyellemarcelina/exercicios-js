@@ -1,0 +1,24 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio JS</title>
+    </head>
+    <body>
+    <label>Cpf com ponto</label>
+    <input type="text" name="cpf" id="cpf"/>
+    <input type="button" value="Exibir CPF" id="btn-exibir-cpf"/>
+
+    <script type="text/javascript">  
+        document.getElementById("btn-exibir-cpf").addEventListener("click", 
+        function (){            
+            let cpf = document.getElementById("cpf").value;
+            cpf = cpf.replace( /(\.|\/|\-)/g,""); //expressão regular - lu me explicar
+            alert("CPF = " + cpf )
+            	
+            })
+    </script>
+    </body>
+</html>
+
+
+

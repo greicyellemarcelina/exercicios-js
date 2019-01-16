@@ -1,0 +1,24 @@
+<html lang="pt-br">    
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio JS</title>
+    </head>
+    <body>
+        <label>Digite 5 números</label>
+        <input type="text" name="txtNumeros" id="txtNumeros">
+        <input type="button" value="Calcular Quadrado" id="btn-calcular">
+
+        <script>
+            document.getElementById("btn-calcular").addEventListener("click",
+            function calcularQuadrado() {
+                let numeros = document.getElementById("txtNumeros").value;
+                numeros = numeros.split(",");
+                for (i = 0; i<numeros.length; i++ ){
+                    quadrado = parseInt(numeros[i]) * parseInt(numeros[i]);
+                    alert("O quadrado de "+ numeros[i] + " é " + quadrado);//como mostrar todos no alert um embaixo do outro
+                    }            
+                }
+                )
+        </script>  
+    </body>
+</html>

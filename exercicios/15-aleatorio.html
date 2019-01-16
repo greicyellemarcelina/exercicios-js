@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Exercicio JS</title>
+        <meta charset="utf-8">
+    </head>
+    <body>              
+        <input type="button" value="Mostrar Numero" id="btn-mostrar">
+
+        <script>
+            document.getElementById("btn-mostrar").addEventListener("click", 
+                function mostrarNumero() {
+                    let numero = Math.floor(Math.random() * 50) - 0;//lu explicar melhor, testes.
+                    alert(numero);
+                })
+        </script>        
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Exercicio JS</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <label>Altura</label>
+        <input type="text" name="txtAltura"id="txtAltura">
+
+        <label>Sexo</label>
+        <input type="text" name="txtSexo"id="txtSexo">
+
+        <input type="button" value="Verificar" id="btn-verificar">
+
+        <script>
+            document.getElementById("btn-verificar").addEventListener("click", 
+                function verificarDados(){
+                    let altura = document.getElementById("txtAltura").value;
+                    let sexo = document.getElementById("txtSexo").value;                
+                    altura = altura.split(",");
+                    sexo = sexo.split(",");
+
+                    let masculino = 0;
+                    let feminino = 0;  
+
+                    let maiorAltura = altura[0];
+                    let sexoMaior = sexo[0];
+
+                    for (i=0; i<altura.length; i++) {
+                        if (sexo[i] === "m") {
+                            masculino++;//quant de masculinos
+                        } else if (sexo[i] === "f") {
+                            feminino++;//quant de femininos
+                        }
+                        
+                        if(altura[i] > maiorAltura){
+                            maiorAltura = altura[i];
+                            sexoMaior = sexo[i];
+                        }
+                    }
+
+                    console.log("Masculino: " + masculino + " - Feminino: " + feminino + "<br>");
+                    console.log("A maior altura é " + maiorAltura + " e pertence ao sexo " + sexoMaior);
+
+
+                })
+            </script>
+    </body>
+</html>

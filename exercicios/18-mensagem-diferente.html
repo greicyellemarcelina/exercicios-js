@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Exercicio JS</title>
+        <meta charset="utf-8">
+    </head>
+    <body>  
+        <laberl>Digite um numero </laberl>
+        <input type="text" id="txtNumero">            
+        <input type="button" value="Ok" id="btn-ok">
+
+        <script>
+            document.getElementById("btn-ok").addEventListener("click", 
+                function verificarNumero() {
+                    let numero = document.getElementById("txtNumero").value;
+                    if(numero < 10) {
+                        document.write("Insuficiente");
+                    } else if(numero >= 10 && numero < 14) {
+                        document.write("Bom");
+                    } else {
+                        document.write("Muito bom");
+                    }
+            })
+        </script>        
+    </body>
+</html>
+
+<!--mostrar mensagem diferentecaso numero seja x-->

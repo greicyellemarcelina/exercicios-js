@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Exercicio JS</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <label>Nomes separados por vírgula</label>
+        <input type="text" name="txtNomes" id="txtNomes">
+
+        <input type="button" value="Verificar" id="btn-verificar">
+
+        <script>
+            document.getElementById("btn-verificar").addEventListener("click", 
+            function inverteNomes(){
+                let nomes = document.getElementById("txtNomes").value;
+                nomes = nomes.split(",");
+                nomes.reverse(); vetor
+                console.log(nomes);
+            })
+        </script>
+    </body>
+</html>

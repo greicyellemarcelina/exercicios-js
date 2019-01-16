@@ -1,0 +1,25 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercicio JS</title>
+    </head>
+    <body>
+        <img src="file:///D:/projects/projects%20js/exercicios/img/lampada-apagada.jpg" id="lampada"/>
+        <input type="button" value="Apagar" id="btn-apagar"/> 
+
+        <script type="text/javascript">
+            document.getElementById("lampada").addEventListener("click", 
+            function acender(){            
+                document.getElementById("lampada").src = 'file:///D:/projects/projects%20js/exercicios/img/lampada-acesa.jpg';
+                    
+            })
+
+            document.getElementById("btn-apagar").addEventListener("click", 
+            function apagar(){            
+                document.getElementById("lampada").src = 'file:///D:/projects/projects%20js/exercicios/img/lampada-apagada.jpg';	
+            })            
+        </script>
+    </body>
+</html>
+
+<!--* como fazer apagar também clicando na img-->
