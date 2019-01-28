@@ -3,22 +3,30 @@
         <title>Exercicio JS</title>
         <meta charset="utf-8">
     </head>
+
     <body>
         <label>Numero</label>
         <input type="text" name="txtNumero" id="txtNumero">                
         <input type="button" value="Calcular Tabuada" id="btn-calcular">
 
         <script>
-            document.getElementById("btn-calcular").addEventListener("click", 
-                function calcularTabuada() {
-                    let numero = document.getElementById("txtNumero").value;
-                    numeros = [0,1,2,3,4,5,6,7,8,9,10];
 
-                    for (i=0; i <numeros.length; i++) {
-                        tabuada = numero * numeros[i];
-                        console.log(numero + " * " + i + " : " + tabuada);      
-                    }
-                })
-        </script>        
+            let verificarButton = document.getElementById("btn-calcular");
+            let numero = document.getElementById("txtNumero");
+            let numeros = [0,1,2,3,4,5,6,7,8,9,10];
+
+            function calcularTabuada() {                
+
+                for (i=0; i <numeros.length; i++) {
+                    
+                    tabuada = numero.value * numeros[i];
+                    console.log(numero.value + " * " + i + " : " + tabuada);      
+                }
+            }
+
+            verificarButton.addEventListener("click", calcularTabuada);
+
+        </script>  
+
     </body>
 </html>

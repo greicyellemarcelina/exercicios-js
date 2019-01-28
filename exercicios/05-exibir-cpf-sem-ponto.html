@@ -3,20 +3,27 @@
         <meta charset="utf-8">
         <title>Exercicio JS</title>
     </head>
-    <body>
-    <label>Cpf com ponto</label>
-    <input type="text" name="cpf" id="cpf"/>
-    <input type="button" value="Exibir CPF" id="btn-exibir-cpf"/>
 
-    <script type="text/javascript">  
-        document.getElementById("btn-exibir-cpf").addEventListener("click", 
-        function (){            
-            let cpf = document.getElementById("cpf").value;
-            cpf = cpf.replace( /(\.|\/|\-)/g,""); //expressão regular - lu me explicar
-            alert("CPF = " + cpf )
-            	
-            })
-    </script>
+    <body>
+        <label>Cpf com ponto</label>
+        <input type="text" name="cpf" id="cpf"/>
+        <input type="button" value="Exibir CPF" id="btn-exibir-cpf"/>
+
+        <script type="text/javascript"> 
+
+            let exibirCpfButton =  document.getElementById("btn-exibir-cpf");
+
+            function exibirCpf (){            
+
+                let cpf = document.getElementById("cpf").value;
+                cpf = cpf.replace( /(\.|\/|\-)/g,""); //expressão regular - lu me explicar
+                alert("CPF = " + cpf );
+                    
+            }
+
+            exibirCpfButton.addEventListener("click", exibirCpf);
+                
+        </script>
     </body>
 </html>
 

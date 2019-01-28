@@ -4,24 +4,32 @@
         <title>Exercicio JS</title>
     </head>
     <body>
-    <label>Num 1</label>
-    <input type="text" name="num1" id="txtNum1"/><br>
+        <label>Num 1</label>
+        <input type="text" name="txtNum1" id="txtNum1"/><br>
 
-    <label>Num 2</label>
-    <input type="text" name="num2" id="txtNum2"/><br>
-    
-    <input type="button" value="Result" id="btn-somar"/>
-    <!-- <input type="text" name="resultt" id="result" size="15"/> -->
+        <label>Num 2</label>
+        <input type="text" name="txtNum2" id="txtNum2"/><br>
+        
+        <input type="button" value="Result" id="btn-somar"/>
+        <!-- <input type="text" name="resultt" id="result" size="15"/> -->
 
 
-    <script type="text/javascript">  
-        document.getElementById("btn-somar").addEventListener("click", 
-        function (num1, num2){            
-            num1 = parseInt(document.getElementById("txtNum1").value);
-            num2 = parseInt(document.getElementById("txtNum2").value);
-            alert((num1 + num2));         	
-            })
-    </script>
+        <script type="text/javascript">  
+        
+            let somar =  document.getElementById("btn-somar");
+            
+            function exibirSoma () {  
+               
+                let num1 = parseInt(document.getElementById("txtNum1").value);
+                let num2 = parseInt(document.getElementById("txtNum2").value);
+
+                alert((num1 + num2));  
+
+            }
+
+            somar.addEventListener("click", exibirSoma);
+
+        </script>
     </body>
 </html>
 

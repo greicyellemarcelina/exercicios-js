@@ -1,0 +1,40 @@
+<html lang="pt-br">
+    <head>
+        <title>Exercicio JS</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <label>Informe uma série de nomes</label>
+            <input type="text" name="txtNomes" id="txtNomes">
+            <input type="button" class="btn btn-primary" value="Exibir" id="btn-exibir">
+        </div>
+        
+        <script>
+
+            let exibiNomesButton = document.getElementById("btn-exibir");
+           
+            function exibirNomes() {
+
+                let nomes = document.getElementById("txtNomes").value;
+                nomes = nomes.split(',');
+
+                for (let i = 0; i< nomes.length; i++) {
+
+                    console.log("O " + (i+1) +  "° nome é: " + nomes[i]);
+
+                }
+            }
+
+            exibiNomesButton.addEventListener("click", exibirNomes);         
+
+        </script>
+
+    </body>
+
+</html>

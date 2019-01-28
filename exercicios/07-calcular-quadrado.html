@@ -9,16 +9,23 @@
         <input type="button" value="Calcular Quadrado" id="btn-calcular">
 
         <script>
-            document.getElementById("btn-calcular").addEventListener("click",
+
+            let calcularButton = document.getElementById("btn-calcular");         
+
             function calcularQuadrado() {
+                
                 let numeros = document.getElementById("txtNumeros").value;
                 numeros = numeros.split(",");
-                for (i = 0; i<numeros.length; i++ ){
+
+                for (i = 0; i<numeros.length; i++ ) {
                     quadrado = parseInt(numeros[i]) * parseInt(numeros[i]);
                     alert("O quadrado de "+ numeros[i] + " é " + quadrado);//como mostrar todos no alert um embaixo do outro
-                    }            
-                }
-                )
+                }            
+                
+            }
+            
+            calcularButton.addEventListener("click", calcularQuadrado);
+
         </script>  
     </body>
 </html>

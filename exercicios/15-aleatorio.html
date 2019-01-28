@@ -3,15 +3,22 @@
         <title>Exercicio JS</title>
         <meta charset="utf-8">
     </head>
-    <body>              
+
+    <body>  
+
         <input type="button" value="Mostrar Numero" id="btn-mostrar">
 
         <script>
-            document.getElementById("btn-mostrar").addEventListener("click", 
-                function mostrarNumero() {
-                    let numero = Math.floor(Math.random() * 50) - 0;//lu explicar melhor, testes.
-                    alert(numero);
-                })
+
+            let mostrarButton = document.getElementById("btn-mostrar");
+
+            function mostrarNumero() {
+                let numero = Math.floor(Math.random() * 50) - 0;//lu explicar melhor, testes.
+                alert(numero);
+            }
+            
+            mostrarButton.addEventListener("click", mostrarNumero);
+
         </script>        
     </body>
 </html>

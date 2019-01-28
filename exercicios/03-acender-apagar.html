@@ -4,20 +4,31 @@
         <title>Exercicio JS</title>
     </head>
     <body>
-        <img src="file:///D:/projects/projects%20js/exercicios/img/lampada-apagada.jpg" id="lampada"/>
+        <img src="img/lampada-apagada.jpg" id="lampada"/>
         <input type="button" value="Apagar" id="btn-apagar"/> 
 
         <script type="text/javascript">
-            document.getElementById("lampada").addEventListener("click", 
-            function acender(){            
-                document.getElementById("lampada").src = 'file:///D:/projects/projects%20js/exercicios/img/lampada-acesa.jpg';
-                    
-            })
 
-            document.getElementById("btn-apagar").addEventListener("click", 
-            function apagar(){            
-                document.getElementById("lampada").src = 'file:///D:/projects/projects%20js/exercicios/img/lampada-apagada.jpg';	
-            })            
+            let apagarLampada = document.getElementById("btn-apagar");
+            let lampada = document.getElementById("lampada");
+
+            function acender(){    
+        
+                lampada = document.getElementById("lampada").src = "img/lampada-acesa.jpg";
+                    
+            }
+
+
+            function apagar() {
+
+                lampada = document.getElementById("lampada").src = "img/lampada-apagada.jpg";
+
+            }
+
+            lampada.addEventListener("click", acender);
+            apagarLampada.addEventListener("click", apagar);
+
+                  
         </script>
     </body>
 </html>

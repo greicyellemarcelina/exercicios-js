@@ -3,14 +3,18 @@
         <title>Exercicio JS</title>
         <meta charset="utf-8">
     </head>
+
     <body>
         <label>Digite 5 números</label>
         <input type="text" name="txtNumeros" id="txtNumeros">
         <input type="button" value="Verificar maior"id="btn-verificar">
 
         <script>
-             document.getElementById("btn-verificar").addEventListener("click",
-                function verificarMaior() {
+
+             let verificarButton = document.getElementById("btn-verificar");
+             
+            function verificarMaior() {
+
                     let numeros = document.getElementById("txtNumeros").value;
                     numeros = numeros.split(",");//array
                     let maior = parseInt(numeros[0]);
@@ -21,7 +25,10 @@
                         }
                     }
                     alert("O maior número é " + maior);            
-                })
+                }
+
+                verificarButton.addEventListener("click", verificarMaior);
+
         </script> 
 
     </body>

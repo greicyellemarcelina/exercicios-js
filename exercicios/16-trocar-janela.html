@@ -7,10 +7,16 @@
         <input type="button" value="Ir para" id="btn-ir">
 
         <script>
-            document.getElementById("btn-ir").addEventListener("click", 
+
+            let trocarPaginaButton = document.getElementById("btn-ir");
+
             function trocarPagina() {
+
                 return window.location.href ="https://developer.mozilla.org/en-US/docs/Web/API/Window/open";
-            })
+            }
+
+            trocarPaginaButton.addEventListener("click", trocarPagina);
+            
         </script>        
     </body>
 </html>
