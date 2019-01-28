@@ -9,14 +9,20 @@
         <input type="button" value="Verificar" id="btn-verificar">
 
         <script>
-            document.getElementById("btn-verificar").addEventListener("click", 
-                function separarData() {
-                    let data = document.getElementById("txtData").value;
-                    data = data.split("/");
-                    console.log("Dia: " + data[0] + " Mes: " + data[1] + " Ano: " + data[2]);
-                })
-        </script>
 
-        
+            let verificarButton = document.getElementById("btn-verificar");
+
+            function separarData() {
+
+                let data = document.getElementById("txtData").value;
+                data = data.split("/");
+                
+                alert("Dia: " + data[0] + " Mes: " + data[1] + " Ano: " + data[2]);
+                
+            }
+
+            verificarButton.addEventListener("click", separarData);
+
+        </script>        
     </body>
 </html>

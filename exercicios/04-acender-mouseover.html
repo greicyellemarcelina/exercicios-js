@@ -4,14 +4,20 @@
         <title>Exercicio JS</title>
     </head>
     <body>
-        <img src="file:///D:/projects/projects%20js/exercicios/img/lampada-apagada.jpg" id="lampada"/>
+        <img src="img/lampada-apagada.jpg" id="lampada"/>
 
         <script type="text/javascript">
-            document.getElementById("lampada").addEventListener("mouseover", 
-            function acender(){            
-            document.getElementById("lampada").src = "file:///D:/projects/projects%20js/exercicios/img/lampada-acesa.jpg";
+        
+            let acenderLampada = document.getElementById("lampada");
+
+            function acender() {            
+            
+                acenderLampada = document.getElementById("lampada").src = "img/lampada-acesa.jpg";
             	
-        })              
+            }  
+
+            acenderLampada.addEventListener("mouseover",acender);
+                       
         </script>
     </body>
 </html>

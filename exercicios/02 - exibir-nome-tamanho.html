@@ -3,20 +3,26 @@
         <meta charset="utf-8">
         <title>Exercicio JS</title>
     </head>
-    <body>
-    <label>Nome</label>
-    <input type="text" name="nome" id="nome"/>
-    <input type="button" value="Exibir Nome" id="btn-exibir-nome"/>
 
-    <script type="text/javascript">  
-        document.getElementById("btn-exibir-nome").addEventListener("click", 
-        function(){            
-            let nome = document.getElementById('nome').value;
-            let quant = nome.length;
-            alert('O Nome é ' + nome + " e possui " + quant + " letras." )
-            	
-            })
-    </script>
+    <body>
+        <label>Nome</label>
+        <input type="text" name="nome" id="nome"/>
+        <input type="button" value="Exibir Nome" id="btn-exibir-nome"/>
+
+        <script type="text/javascript">
+
+            let exibirNomeButton = document.getElementById("btn-exibir-nome");  
+            let nome = document.getElementById("nome");
+
+            function exibirQuant(){ 
+                let quant = nome.length;
+                alert('O Nome é ' + nome.value + " e possui " + quant + " letras." )
+                    
+            }
+
+            exibirNomeButton.addEventListener("click", exibirQuant);
+
+        </script>
     </body>
 </html>
 

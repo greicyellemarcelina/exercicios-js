@@ -3,23 +3,34 @@
         <title>Exercicio JS</title>
         <meta charset="utf-8">
     </head>
+
     <body>  
-        <laberl>Digite um numero </laberl>
+
+        <label>Digite um numero </label>
         <input type="text" id="txtNumero">            
         <input type="button" value="Ok" id="btn-ok">
 
         <script>
-            document.getElementById("btn-ok").addEventListener("click", 
-                function verificarNumero() {
-                    let numero = document.getElementById("txtNumero").value;
-                    if(numero < 10) {
-                        document.write("Insuficiente");
-                    } else if(numero >= 10 && numero < 14) {
-                        document.write("Bom");
-                    } else {
-                        document.write("Muito bom");
-                    }
-            })
+
+            let verificarNumeroButton = document.getElementById("btn-ok");
+            let numero = document.getElementById("txtNumero");
+
+
+            function verificarNumero() {
+
+                if (numero.value < 10) {
+                    document.write("Insuficiente");
+
+                } else if (numero.value >= 10 && numero.value < 14) {
+                    document.write("Bom");
+                    
+                } else {
+                    document.write("Muito bom");
+                }
+            }
+
+            verificarNumeroButton.addEventListener("click", verificarNumero);
+
         </script>        
     </body>
 </html>
